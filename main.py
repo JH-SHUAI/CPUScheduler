@@ -1,15 +1,25 @@
-# This is a sample Python script.
+"""
+The program will run both GA algorithm and 6 traditional CPU Scheduling methods and comparing
+their performance by the average process waiting time
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+Group members: Han Zhou 20096862
+"""
+import Initilization
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def main(name):
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    num_process = 4
+    burst_time_limit = 5
+    total_burst_time = 20
+    # Generate Process Info
+    process_info = Initilization.initializeProcessInfo(num_process, total_burst_time)
+
+    # Traditional Methods
+
+    # GA Algorithm
+
+
+
+main()
+
