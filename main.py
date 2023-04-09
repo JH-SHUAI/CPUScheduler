@@ -3,9 +3,12 @@ The program will run both GA algorithm and 6 traditional CPU Scheduling methods 
 their performance by the average process waiting time
 
 Group members: Han Zhou 20096862
+Tingzhou Jia 20130800
+Yilin Zhou 20100336
 """
 import Initilization
-
+import GASchduler
+import TraditionalScheduler
 
 def main(name):
 
@@ -16,9 +19,10 @@ def main(name):
     process_info = Initilization.initializeProcessInfo(num_process, total_burst_time)
 
     # Traditional Methods
+    TraditionalScheduler.SJF.process()
 
     # GA Algorithm
-
+    GASchduler.GA_Scheduler.process()
 
 
 main()
