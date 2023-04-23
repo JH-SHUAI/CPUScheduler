@@ -9,7 +9,7 @@ import random
 
 
 def mutate(individual: list, process_info: dict) -> list:
-    mutant = permutation_swap(individual)
+    mutant = permutation_swap(individual, process_info)
 
     return mutant
 
@@ -22,6 +22,8 @@ def permutation_swap(individual: list, process_info: dict) -> list:
 
     process1 = individual[index1]
     process2 = individual[index2]
+    if process1 == -1 or process2 == -1:  # check illegal individual
+        return individual
     arrival_time1 = process_info[process1][1]
     arrival_time2 = process_info[process2][1]
 
