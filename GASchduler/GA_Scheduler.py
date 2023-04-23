@@ -60,8 +60,11 @@ def process(total_burst_time: int, process_info: dict) -> list:
 
             offspring.append(off1)
             offspring_fitness.append(evaluation.fitness_turnaround_time(off1, process_info))
+            # offspring_fitness.append(evaluation.fitness_avgwait_time(off1, process_info))
             offspring.append(off2)
             offspring_fitness.append(evaluation.fitness_turnaround_time(off2, process_info))
+            # offspring_fitness.append(evaluation.fitness_avgwait_time(off2, process_info))
+
             i = i + 2  # update the counter
 
         pop, fitness = survivor_selection.mu_plus_lambda(pop, fitness, offspring, offspring_fitness)
